@@ -46,6 +46,8 @@ public class NexoApplication {
 					login.continueButton(driver);
 					login.clickOnResourcePlanningButton(driver);
 					login.clickOnCreateFSRequest(driver);
+					login.mulptiTransfer(driver, "WD0181", "rIlb2I urColorTxtStandard");
+	
 					login.clickOnRolTab(driver);
 					login.rolDetails(driver);
 					login.timeRules(driver);

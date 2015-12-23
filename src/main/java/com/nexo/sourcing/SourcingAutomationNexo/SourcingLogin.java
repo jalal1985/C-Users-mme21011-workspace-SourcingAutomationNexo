@@ -1,10 +1,13 @@
 package com.nexo.sourcing.SourcingAutomationNexo;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
 import java.io.IOException;
 import java.util.logging.Logger;
 import java.util.logging.Logger;
@@ -93,18 +96,30 @@ public class SourcingLogin implements SourcingInterface {
 	}
 
 	// code ex code van raoul combineren
-	/*
-	 * public static void mulptiTransfer(WebDriver driver, By dropdownID, String
-	 * text, By to) { String valuetext = dropdownID; WebElement element =
-	 * findElements(driver, dropdownID); Select select = new Select(element);
-	 * List<WebElement> options = element.findElements(By.tagName("option"));
-	 * for (WebElement value: options) { valuetext = value.getText(); if
-	 * (valuetext.equalsIgnoreCase(text)) { try {
-	 * select.selectByVisibleText(valuetext); locateElement(driver, to,
-	 * 5).click(); break; } catch (Exception e) { System.out.println(valuetext +
-	 * "Value not found in Dropdown to Select"); } } } }
-	 */
-
+	  public  void mulptiTransfer(WebDriver driver, String dropdownID, String text) { 
+		  driver.findElement(By.id("WD017E-btn")).click();
+		  String valuetext = dropdownID; 
+		  WebElement element = driver.findElement(By.id(dropdownID)); 
+		  driver.findElement(By.id("WD0181")).click(); 
+		  
+	  }
+		  /*
+		  Select select = new Select(element);
+		  List<WebElement> options = element.findElements(By.className(text));
+		  for (WebElement value: options) { 
+			  valuetext = value.getText(); 
+			  if(valuetext.equalsIgnoreCase(text)) { 
+				  try {
+					  select.selectByVisibleText(valuetext); 
+					  driver.findElement(By.id("WD0181")).click(); 
+					  break; 
+				} catch (Exception e) { 
+					System.out.println(valuetext + "Value not found in Dropdown to Select"); 
+				} 
+			} 
+		} }
+		*/
+//WD0181
 	public void detailRequest(WebDriver driver) {
 		WebElement entryTest = driver.findElement(By.id("WD01D4"));
 		entryTest.clear();
