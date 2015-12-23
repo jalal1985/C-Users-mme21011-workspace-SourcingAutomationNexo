@@ -16,7 +16,7 @@ public class NexoApplication {
 
 	public static void main(String[] args) throws InterruptedException {
 		  Logger Log = LoggerFactory.getLogger(NexoApplication.class);
-
+		  System.out.println("hoi jalal");
 		WebDriver driver = new FirefoxDriver();
 		driver.get(
 				"https://ordsap202.beheer.lan:44310/nwbc/?sap-nwbc-node=root&sap-client=100&sap-language=NL&sap-theme=sap_corbu");
