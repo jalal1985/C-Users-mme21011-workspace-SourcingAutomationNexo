@@ -23,6 +23,7 @@ public class SoucingRequestInsertion implements SourcingInterface {
 		element2.click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
+		logger.getName();
 	}
 
 
