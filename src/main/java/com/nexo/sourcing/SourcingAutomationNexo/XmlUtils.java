@@ -31,8 +31,7 @@ import org.xml.sax.SAXException;
 */
 public class XmlUtils {
     private static Document doc;
-    private static final String FILE_NAME = "D:\\data\\dto21215\\Documents\\NetBeansProjects\\TestApp\\src\\XML\\xml-data.xml";
-    
+    private static final String FILE_NAME= "D:\\Data\\mme21011\\Desktop\\NEXO\\nexoxml.xml";
 
     public static String retrieveElementByXMLtag(String xPathExpression) throws XPathExpressionException {
         XPath xpath = XPathFactory.newInstance().newXPath();

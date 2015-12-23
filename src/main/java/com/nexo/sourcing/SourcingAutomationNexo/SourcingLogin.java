@@ -68,7 +68,7 @@ public class SourcingLogin implements SourcingInterface {
 
 	public void clickOnResourcePlanningButton(WebDriver driver) {
 		try {
-			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	
 			WebElement resourcePlanningButton = driver.findElement(By.cssSelector("#ul_nav_1 li:nth-child(4) a"));
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			resourcePlanningButton.click();
@@ -129,8 +129,19 @@ public class SourcingLogin implements SourcingInterface {
 			{
 				WebElement customerName = driver.findElement(By.id("WD025E"));
 				customerName.click();
-				customerName.sendKeys("Naam van klant");
+				customerName.clear();
+				
+				
+				XmlUtils.readXmlData();
+		
+				
+			
+						customerName.sendKeys("" + XmlUtils.retrieveElementByXMLtag("//userlogin//username"));
+				
+				
+				
 				customerName.sendKeys("" + XmlUtils.retrieveElementByXMLtag("//newUsername//newPassword"));
+				System.out.println("XML Data inserted");
 
 				// WebElement responsible =
 				// driver.findElement(By.xpath(".//*[@id='WD0279' and
